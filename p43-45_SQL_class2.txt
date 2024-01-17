@@ -1,0 +1,76 @@
+--Data types 
+--Type of data/value of an object can hold is known as data type.
+--1.Numeric data type 
+
+--1.BIT
+--it stores value 0 or 1
+
+--2.TINYINT 
+--It will store the value ranging from 0 to 255
+
+--3.SMALLINT
+--it will store value ranging -32768 to 32767
+
+--4.Decimal
+--an exact fixed point number 
+
+--5. INT
+--it stores an integer value i.e. ranging from -2147483648 to 2147483647
+
+--6.BIGINT
+--BIGINT has storage and computational efficiency,They hold a broad range of values.
+--BIGINT values require 8 bytes of storage.
+
+--2.Approximate numeric data type 
+--1.Float 
+--it will store floating point number range is -1.8E to 308 to 1.8E to 308
+--for Ex: 8.2345, 0.9876 etc
+--2.Real
+--it will also store an floating point numbers -3.40E to 38 to 3.40E to 38
+
+--CLASS-2
+--3.String or character data type
+--1.char - 0-9,a-z,A-Z and Special symbol it will store data as 1 bit
+--Static memory allocation and it is having size of 8000 chars
+--for ex: char(20) -- AMAR - 4 char remaining 16 blocks of memory waisted because it has been fixed
+
+declare @var char(8000)='AMARpatil';
+print @val
+print datalength(@val)
+print len(@val)
+
+--2.varchar -  - 0-9,a-z,A-Z and Special symbol
+--It is dynamic memory allocation and it will store data as 1 bit
+--for ex: varchar(20) -- AMAR - 4 char reaming 16 blocks of memory it will release
+declare @val1 varchar(8000)='AMARPatil';
+print @val1
+print datalength(@val1)
+print len(@val1)
+
+
+
+
+
+-- create New Database
+create database Python43_45
+use Python43_45
+
+
+--Create New Table
+create table Emp(Eid int,Ename char(5),city varchar(10))
+select * from Emp
+insert into emp values(101,'Manan','Mumbai')
+insert into emp values(2,'Raman','Manglore')
+insert into emp values(3,'Rina','pune')
+insert into emp values(4,'Manan','Mumbai')
+insert into emp values(5,'shree','Banglore')
+insert into emp values(6,'Payal','jaipur')
+insert into emp values(10,'priya','Kolkata')
+
+select * from emp where eid=5
+
+select * from emp where Ename='priya'
+
+
+
+
